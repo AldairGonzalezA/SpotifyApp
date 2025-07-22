@@ -5,7 +5,6 @@ export const useSpotify = (artista,pagina) => {
   const [canciones, setCanciones] = useState([])
   const [total,setTotal] = useState(1)
   
-
   useEffect(()=>{
     const fetchData = async () =>{
       const accessToken = getAccessToken();
@@ -29,10 +28,6 @@ export const useSpotify = (artista,pagina) => {
 
     fetchData()
   },[artista, pagina])
-
-  
-
-  console.log(canciones)
 
   return {
     canciones,
